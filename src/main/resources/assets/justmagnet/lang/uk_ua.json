@@ -1,0 +1,11 @@
+{
+  "itemgroup.justmagnet": "Просто магніт",
+  "item.justmagnet.base_core": "Ядро магніта",
+  "item.justmagnet.advanced_core": "Просунуте ядро магніта",
+  "item.justmagnet.base_magnet": "Магніт",
+  "item.justmagnet.advanced_magnet": "Просунутий магніт",
+  "item.justmagnet.broken_base_magnet": "Зламаний магніт",
+  "item.justmagnet.broken_advanced_magnet": "Зламаний просунутий магніт",
+  "item.justmagnet.magnet.active": "Активний",
+  "item.justmagnet.magnet.not_active": "Не активний"
+}

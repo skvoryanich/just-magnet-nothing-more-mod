@@ -1,0 +1,11 @@
+{
+  "itemgroup.justmagnet": "Einfach Magnet",
+  "item.justmagnet.base_core": "Magnetkern",
+  "item.justmagnet.advanced_core": "Fortgeschrittener Magnetkern",
+  "item.justmagnet.base_magnet": "Magnet",
+  "item.justmagnet.advanced_magnet": "Fortgeschrittener Magnet",
+  "item.justmagnet.broken_base_magnet": "Kaputter Magnet",
+  "item.justmagnet.broken_advanced_magnet": "Kaputter fortgeschrittener Magnet",
+  "item.justmagnet.magnet.active": "Aktiv",
+  "item.justmagnet.magnet.not_active": "Nicht aktiv"
+}
