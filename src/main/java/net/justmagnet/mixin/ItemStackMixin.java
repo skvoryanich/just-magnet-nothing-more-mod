@@ -16,8 +16,8 @@ public class ItemStackMixin {
 	@Inject(method = "getMaxDamage", at = @At("HEAD"), cancellable = true)
 	private void getMaxDamage(CallbackInfoReturnable<Integer> cir) {
 		ItemStack self = (ItemStack) (Object) this;
-		
-		// На сервере: устанавливаем компонент MAX_DAMAGE из конфига
+
+		// On server: set MAX_DAMAGE component from config
 		if (FabricLoader.getInstance().getEnvironmentType() == net.fabricmc.api.EnvType.SERVER) {
 			if (self.getItem() == ModItems.BASE_MAGNET) {
 				int durability = ModConfigManager.getMagnetDurability();
@@ -34,18 +34,18 @@ public class ItemStackMixin {
 				return;
 			}
 		} else {
-			// На клиенте: читаем компонент MAX_DAMAGE из ItemStack (синхронизируется с сервера)
-			// Если компонента нет, не переопределяем - пусть используется дефолтное поведение
+			// On client: read MAX_DAMAGE component from ItemStack (synchronized from server)
+			// If component is not present, don't override - use default behavior
 			if (self.getItem() == ModItems.BASE_MAGNET || self.getItem() == ModItems.ADVANCED_MAGNET) {
 				Integer maxDamage = self.get(DataComponentTypes.MAX_DAMAGE);
 				if (maxDamage != null && maxDamage > 0) {
-					// Компонент уже установлен сервером, используем его
-					JustMagnetMod.LOGGER.debug("ItemStackMixin: {} getMaxDamage called on CLIENT, using component value {}", 
+					// Component is already set by server, use it
+					JustMagnetMod.LOGGER.debug("ItemStackMixin: {} getMaxDamage called on CLIENT, using component value {}",
 						self.getItem() == ModItems.BASE_MAGNET ? "BASE_MAGNET" : "ADVANCED_MAGNET", maxDamage);
 					cir.setReturnValue(maxDamage);
 					return;
 				}
-				// Компонента нет - не переопределяем, пусть используется дефолтное поведение
+				// Component is not present - don't override, use default behavior
 			}
 		}
 	}

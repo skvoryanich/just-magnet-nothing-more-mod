@@ -9,7 +9,7 @@ public class ModEvents {
 
 	public static void registerModEvents() {
 		JustMagnetMod.LOGGER.info("Registering mod events");
-		// События регистрируются через Mixin
+		// Events are registered through Mixin
 	}
 }
 

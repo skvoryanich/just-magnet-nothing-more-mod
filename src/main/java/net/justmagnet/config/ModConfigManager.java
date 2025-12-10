@@ -18,7 +18,7 @@ public final class ModConfigManager {
 	}
 
 	public static void init() {
-		// Конфиг загружается только на сервере
+		// Config is loaded only on server
 		if (FabricLoader.getInstance().getEnvironmentType() != EnvType.SERVER) {
 			JustMagnetMod.LOGGER.info("ModConfigManager: Skipping config initialization on client");
 			return;

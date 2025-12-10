@@ -1,31 +1,27 @@
 # Just Magnet, nothing more
 
-Мод для Minecraft 1.21.10 добавляющий магниты в игру.
+A mod for Minecraft 1.21.10 that adds magnets to the game.
 
-## Описание
+## Description
 
-Мод добавляет систему магнитов для автоматического подбора предметов:
-- **Ядро магнита** - базовый компонент для создания магнита
-- **Продвинутое ядро магнита** - улучшенная версия ядра
-- **Магнит** - обычный магнит для подбора предметов
-- **Продвинутый магнит** - улучшенная версия с большей прочностью
+This mod adds a magnet system for automatic item pickup:
+- **Magnet Core** - basic component for crafting magnets
+- **Advanced Magnet Core** - improved version of the core
+- **Magnet** - standard magnet for item pickup
+- **Advanced Magnet** - improved version with higher durability
 
-## Особенности
+## Features
 
-- Активация/деактивация магнита ПКМ
-- Настраиваемая прочность через конфиг
-- Поддержка чар Прочность (Unbreaking) и Починка (Mending)
-- Переплавка сломанных магнитов обратно в ядра
-- Настраиваемая дистанция подбора предметов
+- Activate/deactivate magnet with right-click
+- Configurable durability through config
+- Support for Unbreaking and Mending enchantments
+- Smelting broken magnets back into cores
+- Configurable item pickup distance
 
-## Требования
+## Requirements
 
 - Minecraft 1.21.10
-- Fabric Loader 0.17.2 или выше
 - Fabric API
-- Cloth Config 15.0.0 или выше (для конфигов)
+- Cloth Config
 
-## Лицензия
-
-MIT License
 

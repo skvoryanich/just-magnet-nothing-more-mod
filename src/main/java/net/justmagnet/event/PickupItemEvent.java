@@ -46,7 +46,7 @@ public interface PickupItemEvent {
 			serverPlayer = serverPlayerEntity;
 		}
 
-		// Применяем урон с учетом чар (Unbreaking работает автоматически через setDamage)
+		// Apply damage taking into account enchantments (Unbreaking works automatically through setDamage)
 		int currentDamage = activeMagnet.getDamage();
 		int newDamage = currentDamage + pickedUpItemsCount;
 
@@ -57,7 +57,7 @@ public interface PickupItemEvent {
 		activeMagnet.setDamage(newDamage);
 
 		if (newDamage >= activeMagnet.getMaxDamage()) {
-			// Определяем какой магнит сломался и заменяем на правильный сломанный
+			// Determine which magnet broke and replace with the correct broken version
 			ItemStack brokenMagnet;
 			if (activeMagnet.getItem() == ModItems.BASE_MAGNET) {
 				brokenMagnet = new ItemStack(ModItems.BROKEN_BASE_MAGNET);

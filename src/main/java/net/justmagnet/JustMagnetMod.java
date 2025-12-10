@@ -18,17 +18,17 @@ public class JustMagnetMod implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Initializing Just Magnet mod");
 
-		// Инициализация конфига ПЕРВОЙ (до всего остального)
+		// Initialize config FIRST (before everything else)
 		ModConfigManager.init();
 
-		// Регистрация компонентов
+		// Register components
 		ModComponents.registerComponents();
 
-		// Регистрация предметов (магниты инициализируются в static блоке после загрузки конфига)
+		// Register items (magnets are initialized in static block after config loading)
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 
-		// Регистрация событий
+		// Register events
 		ModEvents.registerModEvents();
 
 		LOGGER.info("Just Magnet mod initialized successfully");

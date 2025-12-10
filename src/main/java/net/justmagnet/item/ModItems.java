@@ -16,7 +16,7 @@ public class ModItems {
 	private ModItems() {
 	}
 
-	// Ядро магнита
+	// Magnet core
 	public static final RegistryKey<Item> BASE_CORE_KEY = RegistryKey.of(
 			RegistryKeys.ITEM,
 			Identifier.of(JustMagnetMod.MOD_ID, "base_core"));
@@ -26,7 +26,7 @@ public class ModItems {
 					.maxCount(1)),
 			BASE_CORE_KEY);
 
-	// Продвинутое ядро магнита
+	// Advanced magnet core
 	public static final RegistryKey<Item> ADVANCED_CORE_KEY = RegistryKey.of(
 			RegistryKeys.ITEM,
 			Identifier.of(JustMagnetMod.MOD_ID, "advanced_core"));
@@ -36,22 +36,22 @@ public class ModItems {
 					.maxCount(1)),
 			ADVANCED_CORE_KEY);
 
-	// Магнит
+	// Magnet
 	public static final RegistryKey<Item> BASE_MAGNET_KEY = RegistryKey.of(
 			RegistryKeys.ITEM,
 			Identifier.of(JustMagnetMod.MOD_ID, "base_magnet"));
 	public static final Item BASE_MAGNET;
-	
-	// Продвинутый магнит
+
+	// Advanced magnet
 	public static final RegistryKey<Item> ADVANCED_MAGNET_KEY = RegistryKey.of(
 			RegistryKeys.ITEM,
 			Identifier.of(JustMagnetMod.MOD_ID, "advanced_magnet"));
 	public static final Item ADVANCED_MAGNET;
-	
+
 	static {
-		// Инициализируем магниты после загрузки конфига
-		// Прочность устанавливается динамически через Mixin в getMaxDamage()
-		// НЕ устанавливаем компонент MAX_DAMAGE здесь, чтобы Mixin мог переопределить значение
+		// Initialize magnets after config loading
+		// Durability is set dynamically through Mixin in getMaxDamage()
+		// DO NOT set MAX_DAMAGE component here to allow Mixin to override the value
 		BASE_MAGNET = registerItem(
 				new MagnetItem(
 						new Item.Settings()
@@ -73,7 +73,7 @@ public class ModItems {
 		);
 	}
 
-	// Сломанный магнит
+	// Broken magnet
 	public static final RegistryKey<Item> BROKEN_BASE_MAGNET_KEY = RegistryKey.of(
 			RegistryKeys.ITEM,
 			Identifier.of(JustMagnetMod.MOD_ID, "broken_base_magnet"));
@@ -83,7 +83,7 @@ public class ModItems {
 					.maxCount(1)),
 			BROKEN_BASE_MAGNET_KEY);
 
-	// Сломанный продвинутый магнит
+	// Broken advanced magnet
 	public static final RegistryKey<Item> BROKEN_ADVANCED_MAGNET_KEY = RegistryKey.of(
 			RegistryKeys.ITEM,
 			Identifier.of(JustMagnetMod.MOD_ID, "broken_advanced_magnet"));

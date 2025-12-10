@@ -14,7 +14,7 @@ public class MagnetHelper {
 	}
 
 	public static int getFirstActiveMagnetInventoryIndex(PlayerEntity player) {
-		// Проверяем оба типа магнитов
+		// Check both magnet types
 		List<Integer> baseMagnetIndices = InventoryUtil.getInventoryIndices(player, ModItems.BASE_MAGNET);
 		List<Integer> advancedMagnetIndices = InventoryUtil.getInventoryIndices(player, ModItems.ADVANCED_MAGNET);
 

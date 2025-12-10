@@ -44,7 +44,7 @@ public abstract class ItemEntityMixin extends Entity implements Ownable {
 			return;
 		}
 
-		// Определяем тип активного магнита и используем соответствующий радиус
+		// Determine the active magnet type and use the corresponding radius
 		ItemStack activeMagnet = MagnetHelper.getActiveMagnetStack(this.target);
 		if (activeMagnet == null) {
 			return;
