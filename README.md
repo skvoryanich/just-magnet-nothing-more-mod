@@ -1,6 +1,6 @@
 # Just Magnet, nothing more
 
-A minimalist mod for Minecraft 1.21.10 that adds **just magnets**. Nothing more.
+A minimalist mod for Minecraft Fabric 1.21.10 that adds **just magnets**. Nothing more.
 
 ## Philosophy
 
